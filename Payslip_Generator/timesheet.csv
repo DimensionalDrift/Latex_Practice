@@ -1,0 +1,12 @@
+number,pps,name,hourly,monday,tuesday,wednesday,thursday,friday,saturday,sunday,holiday,overtime
+
+1,9765474A,Andy Rose,27.27,8,8,8,8,8,0,0,0,0
+2,9158187D,John Harrell,16.22,0,0,8,8,8,8,8,0,0
+3,6611162B,Alison Morales,13.60,8,5,5,5,8,0,0,0,0
+4,6622899S,Rusty Maynard,16.99,7.5,7.5,7,7.5,7.5,0,0,0,0
+5,1002311O,Jorge Harrison,25.09,0,0,8,8,8,8,8,0,0
+6,2878704G,Jacqueline Miles,18.97,8,8,8,8,8,0,0,0,0
+7,7572776U,Lucile Myers,16.47,0,0,7,9,9,0,0,16,0
+8,1084564W,Cary Avery,12.08,8,8,8,8,8,0,0,0,0
+9,5815984P,Alana Arroyo,27.23,9,9,7,7,9,0,0,0,4
+10,3203369T,Sydney Johnson,28.59,7.5,7.5,7,7.5,7.5,0,0,0,0

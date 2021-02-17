@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{color, colortbl} % Used to color in some of the cells of the table
+\usepackage{hhline} % Used to add horizontal lines to the shaded cells of the table as cline does not work with colortbl
+
+% Commands to reduce the size of the page from A4
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\paperheight}{5in}
+
+% Commands to add more whitespace to the table
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.5}
+
+% Command to define the color for some of the table cells
+\definecolor{Gray}{gray}{0.9}
+
+\begin{document}
+
+% Note: values surrounded by double plus signs are used as placeholders and are replaced with their corresponding values by the accompanying python script
+
+% Company Name
+\Huge{\underline{\textbf{Some Company Ltd.}}}
+
+% Employee Details And Dates Table
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lllllll}
+        \textbf{Name}:              & +name+   &  & \textbf{Frequency}: & Weekly        & \textbf{PPS No}: & +PPSN+ \\
+        \textbf{Employee Number}:   & +number+ &  & \textbf{Period}:    & +week-number+ & \textbf{Date}:   & +date+
+    \end{tabular}
+\end{table}
+
+\vspace{-5mm}
+
+% Payslip Table
+\begin{table}[h]
+    \begin{tabular}{|llllll|l|l|}
+        \hhline{|---|---|~|-|}
+        \multicolumn{3}{|l|}{Payments}                                                           & \multicolumn{3}{l|}{Deductions}                                   &  & Summary       \\ \hhline{|~~~|~~~|~|-|}
+        Description & Units                            & \multicolumn{1}{l|}{Amount}             & Description                 & Units            & Amount           &  & \cellcolor{Gray} Total Gross   \\ \hhline{|---|---|~|-|}
+        Gross Pay   & +hours-worked+                   & \multicolumn{1}{l|}{+hours-worked-pay+} & PAYE                        &                  & +PAYE+           &  & +gross-pay+   \\ \hhline{|~~~|~~~|~|-|}
+        Overtime    & +overtime+                       & \multicolumn{1}{l|}{+overtime-pay+}     & USC                         &                  & +USC+            &  & \cellcolor{Gray} Taxable Gross \\ \hhline{|~~~|~~~|~|-|}
+        Holiday     & +holiday+                        & \multicolumn{1}{l|}{+holiday-pay+}      &                             &                  &                  &  & +gross-pay+   \\ \hhline{|~~~|~~~|~|-|}
+                    &                                  & \multicolumn{1}{l|}{}                   &                             &                  &                  &  & \cellcolor{Gray} Deductions    \\ \hhline{|~~~|~~~|~|-|}
+                    &                                  & \multicolumn{1}{l|}{}                   &                             &                  &                  &  & +gross-tax+   \\ \hhline{|---|---|~|-|}
+        \multicolumn{2}{|l|}{Cumulative}               & \multicolumn{2}{l|}{Revenue Detail}                                   & \multicolumn{2}{l|}{Pension Detail} &  & \cellcolor{Gray} Total Payment \\ \hhline{|---|---|~|-|}
+        Gross       & \multicolumn{1}{l|}{+gross-pay+} & Basis                                   & \multicolumn{1}{l|}{Cumul}  & Cum er           & 10.00            &  & \\
+        PAYE        & \multicolumn{1}{l|}{+PAYE+}      & Tax Credit                              & \multicolumn{1}{l|}{60.00}  &                  &                  &  & +net-pay+     \\
+        USC         & \multicolumn{1}{l|}{+USC+}       & Cut-off                                 & \multicolumn{1}{l|}{600.00} &                  &                  &  & \\ \hhline{|---|---|~|-|}
+    \end{tabular}
+\end{table}
+
+\end{document}
